@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>FrescoMart</title>
+	<link rel="stylesheet" type="text/css" href="signin.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap">
+	<script src="https://kit.fontawesome.com/f6816dd194.js" crossorigin="anonymous"></script>
+	</head>
+<body>
+	<div class="header">
+		<div class="container">
+			<div class="navbar">
+				<div class="logo">
+					<img src="images/FrescoMart2.png" alt="logo_image" width="125px">
+				</div>
+				<nav>
+					<ul id="MenuItems">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="">Product</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">Contact</a></li>
+						<li><a href="">Sign in</a></li>
+					</ul>
+				</nav>
+				<img src="images/image2.png" alt="img_of_cart" width="30px" height="30px">
+				<img src="images/menu.png" class="menu_icon" onclick="menutoggle()">
+			</div>
+			<div class="row">
+				<div class="col-2">
+					<img src="images/groceries.svg" alt="pic_of_vegetables">
+				</div>
+				<div class="col-2">
+					<div class="main center">
+						<div class="box center">
+							<!--<div class="signin-signup">-->
+					        	<form action="#" class="sign-in-form">
+						            <h2 class="title">Sign in</h2>
+
+						            <div class="input-field">
+						              <i class="fas fa-user"></i>
+						              <input type="text" placeholder="Username" />
+						            </div>
+
+						            <div class="input-field">
+						              <i class="fas fa-lock"></i>
+						              <input type="password" placeholder="Password" />
+						            </div>
+
+						            <input type="submit" value="Login" class="btn solid" />
+						            <p class="social-text">Or Sign in with social platforms</p>
+
+						            <div class="social-media">
+						              <a href="#" class="social-icon">
+						                <i class="fab fa-facebook-f"></i>
+						              </a>
+						              <a href="#" class="social-icon">
+						                <i class="fab fa-google"></i>
+						              </a>
+						            </div>          
+					          	</form>
+					        <!--</div>-->
+							<div class="arr_container center">
+				                <i class="fas fa-arrow-right"></i>
+				            </div>
+				            <div class="left_container off">
+				            	<!--<div class="signin-signup">-->
+				            		<form action="#" class="sign-up-form">
+							            <h2 class="title">Sign up</h2>
+
+							            <div class="input-field">
+							              <i class="fas fa-user"></i>
+							              <input type="text" placeholder="Username" />
+							            </div>
+
+							            <div class="input-field">
+							              <i class="fas fa-envelope"></i>
+							              <input type="email" placeholder="Email" />
+							            </div>
+
+							            <div class="input-field">
+							              <i class="fas fa-lock"></i>
+							              <input type="password" placeholder="Password" />
+							            </div>
+
+							            <input type="submit" class="btn" value="Sign up" />
+							            <p class="social-text">Or Sign up with social platforms</p>
+
+							            <div class="social-media">
+							              <a href="#" class="social-icon">
+							                <i class="fab fa-facebook-f"></i>
+							              </a>
+							              <a href="#" class="social-icon">
+							                <i class="fab fa-google"></i>
+							              </a>
+							            </div>
+						          	</form>
+				            	<!--</div>-->
+				          		<div class="cancel center">
+				                    <i class="fas fa-times"></i>
+				                </div>   
+				            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <script>
+        const clc = document.querySelector(".cancel");
+        const arr = document.querySelector(".arr_container");
+        const left_container = document.querySelector(".left_container");
+
+        arr.addEventListener("click", ()=>{
+            arr.classList.add("active_arr");
+            if(left_container.classList.contains("off")){
+                left_container.classList.remove("off");
+                left_container.classList.add("active");
+            }
+        });
+        clc.addEventListener("click", ()=>{
+            arr.classList.remove("active_arr");
+            if(left_container.classList.contains("active")){
+                left_container.classList.remove("active");
+                left_container.classList.add("off");
+            }
+        });
+    </script>
+
+    <script>
+		var MenuItems = document.getElementById("MenuItems");
+
+		MenuItems.style.maxHeight = "0px";
+
+		function menutoggle(){
+			if(MenuItems.style.maxHeight == "0px"){
+				MenuItems.style.maxHeight = "200px";
+			}
+			else{
+				MenuItems.style.maxHeight = "0px";
+			}
+		}
+	</script>
+</body>
+</html>
